@@ -1,0 +1,14 @@
+<p>component3 works!</p>
+<div class="card col-sm-4" *ngFor = "let video of favourites">
+        
+    <iframe width="100%" height="300" [src]="vidId + video.video_Id | safe" ></iframe>
+    {{video.video_Id }}
+       <div class="card-body">
+            <button class="btn btn-outline-warning my-2 my-sm-0"  (click)="remove(video.id)">Remove from my favourites</button>
+
+
+
+        </div>
+    
+    
+</div>
