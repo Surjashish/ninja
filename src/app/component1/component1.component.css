@@ -1,3 +1,20 @@
 img{
     width: 60px;
 }
+.card{
+    border: none;
+}
+.btn2{
+    position: absolute;
+    bottom: 5px;
+    
+    
+    
+}
+.card{
+    height: 600px;
+    padding-top: 10px;
+}
+.card-body{
+    text-align: center;
+}

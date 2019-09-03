@@ -12,17 +12,12 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="/MyFav">My Favourites</a>
             </li>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+              
+            </li> -->
            
           </ul>
           <div class="form-inline my-2 my-lg-0">
@@ -34,8 +29,8 @@
 
       <br>
         
-
-<div class="row">
+<section class="container">
+<section class="row">
     
   <div class="card col-sm-4" *ngFor = "let video of videos.items">
         
@@ -43,10 +38,14 @@
                 <div class="card-body">
                     <a [routerLink]="['/description',video.id.videoId]"><h5 class="card-title">{{video.snippet.title}}</h5></a>
                     <p class="card-text">{{video.snippet.description}}</p>
-                    <p class="card-text"><small class="text-muted">published at + {{video.snippet.publishedAt}}</small></p>
-                    <button class="btn btn-outline-success my-2 my-sm-0"  (click)="add(video.id.videoId)">Add to my favourites</button>
+                     <p class="card-text published"><small class="text-muted">published at + {{video.snippet.publishedAt}}</small></p>
+                    <button class="btn btn-outline-success my-2 my-sm-0 btn2"  (click)="add(video.id.videoId)" #btnId>Add to my favourites</button>
                 </div>
     
     </div>
 
-  </div>
+  </section>
+</section>
+
+
+  

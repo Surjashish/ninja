@@ -38,7 +38,8 @@ export class Component1Component implements OnInit {
   add(value)
   { 
     console.log(value);
-    this.FetchData.add1(value);
+    this.FetchData.add1(value).subscribe(console.log);
+    alert("Your video has been added to favourites")
   }
 
 }

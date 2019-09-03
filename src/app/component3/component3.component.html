@@ -1,14 +1,53 @@
-<p>component3 works!</p>
-<div class="card col-sm-4" *ngFor = "let video of favourites">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="assets/images.png" alt="Youthoob"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         
-    <iframe width="100%" height="300" [src]="vidId + video.video_Id | safe" ></iframe>
-    {{video.video_Id }}
-       <div class="card-body">
-            <button class="btn btn-outline-warning my-2 my-sm-0"  (click)="remove(video.id)">Remove from my favourites</button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/MyFav">My Favourites</a>
+              </li>
+              
+             
+            </ul>
+            
+          </div>
+        </nav>
+  
+        <br>
 
 
+<section class="container">
+    <h3>Your favourite list right here!!!</h3>
 
-        </div>
-    
-    
-</div>
+<section class="row">
+
+    <div class="card col-sm-4" *ngFor = "let video of favourites">
+            
+        <iframe width="100%" height="300" [src]="vidId + video.video_Id | safe" ></iframe>
+        
+        
+        <section class="card-body">
+                <button class="btn btn-outline-warning my-2 my-sm-0"  (click)="remove(video.id)">Remove from my favourites</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 post" type="submit" (click)="comment(myComment.value,video.id,video.video_Id)">post!</button>
+
+                <br><br>
+                <input class="form-control mr-sm-2" #myComment type="text" placeholder="{{video.comments}}" aria-label="comment">
+                <br>
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="comment(myComment.value,video.id,video.video_Id)">post!</button> -->
+                <br><br>
+                
+                <!-- <h6><i>The above box shows comments entered earlier</i></h6> -->
+
+
+        </section>
+        
+        
+    </div>
+</section>
+</section>

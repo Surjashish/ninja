@@ -9,7 +9,9 @@ import { Component3Component } from './component3/component3.component';
 const routes: Routes = [
 {path: 'home', component: Component1Component},
 {path: 'description/:VID', component: Component2Component},
-{path: 'MyFav', component: Component3Component}
+{path: 'MyFav', component: Component3Component},
+{path: "", component: Component1Component},
+{ path: '**', redirectTo: '/home' }
 
 
 ];
